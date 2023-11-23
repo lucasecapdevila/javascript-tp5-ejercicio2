@@ -1,3 +1,17 @@
+const btnDatos = document.querySelector('.btn-success')
+const btnGeneracion = document.querySelector('.btn-warning')
+const btnMayorDeEdad = document.querySelector('.btn-danger')
+const formularioDatos = document.querySelector('form')
+
+const obtenerDatos = (e) => {
+  e.preventDefault()
+  console.log('En espera');
+}
+
+formularioDatos.addEventListener('submit', obtenerDatos)
+
+
+
 class Persona{
   constructor(nombre, edad, dni, sexo, peso, altura, anioNacimiento, domicilio){
     this._nombre = nombre
