@@ -1,16 +1,30 @@
-const btnDatos = document.querySelector('.btn-success')
 const btnGeneracion = document.querySelector('.btn-warning')
 const btnMayorDeEdad = document.querySelector('.btn-danger')
 const formularioDatos = document.querySelector('form')
+let listaUsuarios = []
 
-const obtenerDatos = (e) => {
+formularioDatos.onsubmit = (e) => {
   e.preventDefault()
-  console.log('En espera');
+  const inputNombre = document.getElementById('nombreUsuario').value
+  const inputEdad = document.getElementById('edadUsuario').value
+  const inputDNI = document.getElementById('dniUsuario').value
+  const inputSexo = document.getElementById('sexoUsuario').value
+  const inputPeso = document.getElementById('pesoUsuario').value
+  const inputAltura = document.getElementById('alturaUsuario').value
+  const inputAnioNacimiento = document.getElementById('anioNacimientoUsuario').value
+  const inputDomicilio = document.getElementById('domicilioUsuario').value
+  const usuario1 = new Persona(inputNombre, inputEdad, inputDNI, inputSexo, inputPeso, inputAltura, inputAnioNacimiento, inputDomicilio)
+  listaUsuarios.push(usuario1)
+  formularioDatos.reset()
+  console.log(usuario1);
+  console.log(listaUsuarios);
 }
 
-formularioDatos.addEventListener('submit', obtenerDatos)
+const mostrarGeneracion = () => {
 
+}
 
+btnGeneracion.addEventListener('click', mostrarGeneracion)
 
 class Persona{
   constructor(nombre, edad, dni, sexo, peso, altura, anioNacimiento, domicilio){
