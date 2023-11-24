@@ -19,6 +19,9 @@ formularioDatos.onsubmit = (e) => {
   const usuario1 = new Persona(inputNombre, inputEdad, inputDNI, inputSexo, inputPeso, inputAltura, inputAnioNacimiento, inputDomicilio)
   listaUsuarios.push(usuario1)
   formularioDatos.reset()
+
+  btnMostrarDatos.className = 'btn btn-primary ancho-btn-responsive d-block'
+  btnEnviarDatos.className = 'btn btn-primary ancho-btn-responsive d-none'
 }
 
 
@@ -119,41 +122,73 @@ class Persona{
 
   mostrarGeneracion(){
     if(this.anioNacimiento >= 1930 && this.anioNacimiento <= 1948){
-      console.log('La persona pertenece a la Generación Silent Generation. Rasgo característico: Austeridad')
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario pertenece a la Generación Silent Generation. Rasgo característico: Austeridad",
+        icon: "info"
+      });
     } else if(this.anioNacimiento >= 1949 && this.anioNacimiento <= 1968){
-      console.log('La persona pertenece a la Generación Baby boom. Rasgo característico: Ambición');        
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario pertenece a la Generación Baby Boom. Rasgo característico: Ambición",
+        icon: "info"
+      });
     } else if(this.anioNacimiento >= 1969 && this.anioNacimiento <= 1980){
-      console.log('La persona pertenece a la Generación X. Rasgo característico: Obsesión por el éxito');
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario pertenece a la Generación X. Rasgo característico: Obsesión por el éxito",
+        icon: "info"
+      });
     } else if(this.anioNacimiento >= 1981 && this.anioNacimiento <= 1993){
-      console.log('La persona pertenece a la Generación Y. Rasgo característico: Frustración');
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario pertenece a la Generación Y (también conocidos como millenials). Rasgo característico: Frustración",
+        icon: "info"
+      });
     } else if(this.anioNacimiento >= 1994 && this.anioNacimiento <= 2010){
-      console.log('La persona pertenece a la Generación Z. Rasgo característico: Irreverencia');
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario pertenece a la Generación Z. Rasgo característico: Irreverencia",
+        icon: "info"
+      });
     } else{
-      console.log('La persona no pertenece a una generación en específico o se ingresó un valor inválido.');
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario no pertenece a una generación en específico o se ingresó un valor inválido.",
+        icon: "info"
+      });
     }
   }
 
   esMayorDeEdad(){
     if (this.edad >= 18) {
-      console.log('La persona es mayor de edad')
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario es mayor de edad",
+        icon: "info"
+      });
     } else {
-      console.log('La persona es menor de edad')
+      Swal.fire({
+        title: `Usuario: ${listaUsuarios[0].nombre}`,
+        text: "El usuario es menor de edad",
+        icon: "info"
+      });
     }
   }
-
+  
   mostrarDatos(){
-    document.write(`
-      <h2>Persona: ${this.nombre}</h2>
-      <ul>
-        <li>Edad: ${this.edad}</li>
-        <li>DNI: ${this.dni}</li>
-        <li>Sexo: ${this.sexo}</li>
-        <li>Peso: ${this.peso}kg</li>
-        <li>Altura: ${this.altura}cm</li>
-        <li>Año de Nacimiento: ${this.anioNacimiento}</li>
-        <li>Domicilio: ${this.domicilio}</li>
-      </ul>
-      <hr>
-    `)
+    Swal.fire({
+      title: `<h2>Usuario: ${listaUsuarios[0].nombre}</h2>`,
+      html: 
+        `<p>Edad del usuario: ${listaUsuarios[0].edad}</p>
+        <p>DNI del usuario: ${listaUsuarios[0].dni}</p>
+        <p>Sexo del usuario: ${listaUsuarios[0].sexo}</p>
+        <p>Peso del usuario: ${listaUsuarios[0].peso}kg</p>
+        <p>Altura del usuario: ${listaUsuarios[0].altura}cm</p>
+        <p>Año de Nacimiento del usuario: ${listaUsuarios[0].anioNacimiento}</p>
+        <p>Domicilio del usuario: ${listaUsuarios[0].domicilio}</p>
+        `,
+      icon: "info"
+    });
   }
 }
