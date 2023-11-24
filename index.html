@@ -44,23 +44,44 @@
     <form action="js/app.js" method="get">
       <div class="d-lg-flex justify-content-lg-between">
         <div class="form-floating mb-3 input-responsive">
-          <input type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese su nombre">
+          <input 
+            type="text"
+            class="form-control"
+            id="nombreUsuario"
+            minlength="4"
+            maxlength="30"
+            required
+            placeholder="Ingrese su nombre">
           <label for="nombreUsuario">Nombre</label>
         </div>
         <div class="form-floating mb-3 input-responsive">
-          <input type="number" class="form-control" id="edadUsuario" placeholder="Ingrese su edad">
+          <input
+            type="number"
+            class="form-control"
+            id="edadUsuario"
+            min="1"
+            max="120"
+            required
+            placeholder="Ingrese su edad">
           <label for="edadUsuario">Edad</label>
         </div>
       </div>
 
       <div  class="d-lg-flex justify-content-lg-between">
         <div class="form-floating mb-3 input-responsive">
-          <input type="number" class="form-control" id="dniUsuario" placeholder="Ingrese su DNI">
+          <input
+            type="number"
+            class="form-control"
+            id="dniUsuario"
+            min="1"
+            max="99999999"
+            required
+            placeholder="Ingrese su DNI">
           <label for="dniUsuario">Documento Nacional de Identidad (DNI)</label>
         </div>
         <div class="form-floating mb-3 input-responsive">
-          <select class="form-select" id="sexoUsuario" aria-label="Default select example">
-            <option selected>Elige una opción</option>
+          <select class="form-select" id="sexoUsuario" aria-label="Selector de género" required>
+            <option value="" selected>Elige una opción</option>
             <option value="H">Hombre</option>
             <option value="M">Mujer</option>
           </select>
@@ -70,22 +91,49 @@
 
       <div class="d-lg-flex justify-content-lg-between">
         <div class="form-floating mb-3 input-responsive">
-          <input type="number" class="form-control" id="pesoUsuario" placeholder="Ingrese su peso">
+          <input
+            type="number"
+            class="form-control"
+            id="pesoUsuario"
+            min="2"
+            max="400"
+            required
+            placeholder="Ingrese su peso">
           <label for="pesoUsuario">Peso (kg)</label>
         </div>
         <div class="form-floating mb-3 input-responsive">
-          <input type="number" class="form-control" id="alturaUsuario" placeholder="Ingrese su altura">
+          <input
+            type="number"
+            class="form-control"
+            id="alturaUsuario"
+            min="35"
+            max="250"
+            required
+            placeholder="Ingrese su altura">
           <label for="alturaUsuario">Altura (cm)</label>
         </div>
       </div>
 
       <div class="d-lg-flex justify-content-lg-between">
         <div class="form-floating mb-3 input-responsive">
-          <input type="number" class="form-control" id="anioNacimientoUsuario" placeholder="Ingrese su año de nacimiento">
+          <input
+            type="number"
+            class="form-control"
+            id="anioNacimientoUsuario"
+            min="1900"
+            max="2023"
+            required
+            placeholder="Ingrese su año de nacimiento">
           <label for="anioNacimientoUsuario">Año de nacimiento</label>
         </div>
         <div class="form-floating mb-3 input-responsive">
-          <input type="text" class="form-control" id="domicilioUsuario" placeholder="Ingrese su localidad">
+          <input
+            type="text"
+            class="form-control"
+            id="domicilioUsuario"
+            minlength="5"
+            maxlength="30"
+            placeholder="Ingrese su localidad">
           <label for="domicilioUsuario">Localidad</label>
         </div>
       </div>
