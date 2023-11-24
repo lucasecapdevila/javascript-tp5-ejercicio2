@@ -32,3 +32,10 @@ input::-webkit-inner-spin-button {
     width: 49%;
   }  
 }
+
+
+
+/* Color de asteriscos */
+span{
+  color: red;
+}

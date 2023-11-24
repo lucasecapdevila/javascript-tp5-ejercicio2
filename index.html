@@ -40,8 +40,9 @@
   <main class="container my-2">
     <h1 class="text-center display-1">Generaciones</h1>
     <p class="lead">Ingrese en el siguiente formulario los datos de la persona:</p>
+    <small>Los campos con <span>*</span> son obligatorios</small>
 
-    <form action="js/app.js" method="get">
+    <form action="js/app.js" method="get" class="mt-4">
       <div class="d-lg-flex justify-content-lg-between">
         <div class="form-floating mb-3 input-responsive">
           <input 
@@ -52,7 +53,7 @@
             maxlength="30"
             required
             placeholder="Ingrese su nombre">
-          <label for="nombreUsuario">Nombre</label>
+          <label for="nombreUsuario">Nombre <span>*</span></label>
         </div>
         <div class="form-floating mb-3 input-responsive">
           <input
@@ -63,7 +64,7 @@
             max="120"
             required
             placeholder="Ingrese su edad">
-          <label for="edadUsuario">Edad</label>
+          <label for="edadUsuario">Edad <span>*</span></label>
         </div>
       </div>
 
@@ -77,7 +78,7 @@
             max="99999999"
             required
             placeholder="Ingrese su DNI">
-          <label for="dniUsuario">Documento Nacional de Identidad (DNI)</label>
+          <label for="dniUsuario">Documento Nacional de Identidad (DNI) <span>*</span></label>
         </div>
         <div class="form-floating mb-3 input-responsive">
           <select class="form-select" id="sexoUsuario" aria-label="Selector de género" required>
@@ -85,7 +86,7 @@
             <option value="H">Hombre</option>
             <option value="M">Mujer</option>
           </select>
-          <label for="sexoUsuario">Género</label>
+          <label for="sexoUsuario">Género <span>*</span></label>
         </div>
       </div>
 
@@ -99,7 +100,7 @@
             max="400"
             required
             placeholder="Ingrese su peso">
-          <label for="pesoUsuario">Peso (kg)</label>
+          <label for="pesoUsuario">Peso (kg) <span>*</span></label>
         </div>
         <div class="form-floating mb-3 input-responsive">
           <input
@@ -110,7 +111,7 @@
             max="250"
             required
             placeholder="Ingrese su altura">
-          <label for="alturaUsuario">Altura (cm)</label>
+          <label for="alturaUsuario">Altura (cm) <span>*</span></label>
         </div>
       </div>
 
@@ -124,7 +125,7 @@
             max="2023"
             required
             placeholder="Ingrese su año de nacimiento">
-          <label for="anioNacimientoUsuario">Año de nacimiento</label>
+          <label for="anioNacimientoUsuario">Año de nacimiento <span>*</span></label>
         </div>
         <div class="form-floating mb-3 input-responsive">
           <input
@@ -134,7 +135,7 @@
             minlength="5"
             maxlength="30"
             placeholder="Ingrese su localidad">
-          <label for="domicilioUsuario">Localidad</label>
+          <label for="domicilioUsuario">Localidad <span>*</span></label>
         </div>
       </div>
 
