@@ -22,11 +22,13 @@ input::-webkit-inner-spin-button {
 
 /* Ancho de elementos en responsive */
 @media screen and (min-width: 768px) {
-  .input-responsive{
-    width: 49%;
-  }
-
   .ancho-btn-responsive{
     width: 30%;
   }
+}
+
+@media screen and (min-width: 992px) {
+  .input-responsive{
+    width: 49%;
+  }  
 }
